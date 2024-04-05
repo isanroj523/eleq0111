@@ -1,0 +1,18 @@
+/*
+Apartado 2: Crea un circuito que haga que el zumbador emita un pitido cada segundo.
+*/
+
+#define BUZZER_ACTIVO 8; // Define el pin conectado al zumbador
+
+
+void setup() {
+  pinMode(BUZZER_ACTIVO, OUTPUT); // Establece el pin del zumbador como salida
+}
+
+
+void loop() {
+  digitalWrite(BUZZER_ACTIVO, HIGH); // Activa el zumbador
+  delay(1000);                   // Espera 1 segundo
+  digitalWrite(BUZZER_ACTIVO, LOW);  // Desactiva el zumbador
+  delay(1000);                   // Espera 1 segundo
+}
