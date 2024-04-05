@@ -1,0 +1,23 @@
+/*
+Crea un circuito que encienda un LED si detecta presencia de agua en el sensor de líquidos.
+*/
+int SENSOR;   // variable para almacenar valor leido de entrada A0
+#define LED 2   // LED en pin digital 2
+
+
+void setup(){
+  pinMode(LED, OUTPUT);   // pin digital 2 como salida
+}
+
+
+void loop(){
+  SENSOR = analogRead(A0);  // lee y almacena valor leido de entrada A0
+  if (SENSOR > 0){    // si hay presencia de agua
+    digitalWrite(LED, HIGH);  // enciende LED
+  }
+  else{
+    digitalWrite(LED, LOW); // si no hay presencia de agua apaga LED
+  }
+ 
+  delay(1000);      // demora de 1 segundo
+}
