@@ -1,0 +1,18 @@
+/*
+Apartado 1: Crea un circuito que detecte la presencia o ausencia de agua 
+y muestre un mensaje indicando “Presencia agua” o “Ausencia agua” dependiendo 
+de si el sensor detecta agua o no. (sin pantalla LCD)
+/*
+int SENSOR;   // variable para almacenar valor leido
+
+
+void setup(){
+  Serial.begin(9600); // inicializa monitor serie a 9600 bps
+}
+
+
+void loop(){
+  SENSOR = analogRead(A0);  // lee y almacena en SENSOR valor leido de entrada A0
+  Serial.println(SENSOR); // muestra en monitor serie
+  delay(1000);      // demora de 1 segundo
+}
