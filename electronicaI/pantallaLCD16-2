@@ -1,0 +1,20 @@
+#include <LiquidCrystal_I2C.h> //Librería de Frank de Brabander
+LiquidCrystal_I2C lcd(0x27,16,2);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+void setup() {
+  lcd.init(); //Inicializa la pantalla LCD
+  lcd.backlight(); //Enciende la retroiluminación de la LCD
+  
+  // Posiciona el cursor en la primera columna (0) y la primera fila (0)
+  lcd.setCursor(0, 0);
+  lcd.print("Hola"); // Imprime "Hola" en la primera fila
+
+
+  // Mueve el cursor a la primera columna (0) de la segunda fila (1)
+  lcd.setCursor(0, 1);
+  lcd.print("Mundo"); // Imprime "Mundo" en la segunda fila
+
+
+}
+void loop() {
+  // No es necesario hacer nada aquí para este ejemplo
+}
